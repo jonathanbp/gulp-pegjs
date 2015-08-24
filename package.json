@@ -1,0 +1,21 @@
+{
+  "name": "gulp-pegjs",
+  "version": "0.0.1",
+  "description": "A gulp-plugin to generate parsers based on PEGJS grammars.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Jonathan Bunde-Pedersen <jonathanbp@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "object-assign": "^4.0.1",
+    "pegjs": "^0.8.0",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "mocha": "^2.2.5"
+  }
+}
