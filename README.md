@@ -19,6 +19,6 @@ var pegjs = require('gulp-pegjs');
 gulp.task('default', function() {
   return gulp.src('src/*.pegjs')
     .pipe(pegjs())
-    pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'));
 });
 ```
