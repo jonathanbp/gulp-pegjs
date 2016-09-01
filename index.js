@@ -25,7 +25,7 @@ module.exports = function (opts) {
 		var filePath = file.path;
 
 		try {
-      file.contents = new Buffer(pegjs.buildParser(file.contents.toString(), options));
+      file.contents = new Buffer(pegjs.generate(file.contents.toString(), options));
       file.path = gutil.replaceExtension(file.path, '.js');
 			this.push(file);
 		} catch (err) {
