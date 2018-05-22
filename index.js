@@ -20,7 +20,7 @@ module.exports = function (opts) {
 		}
 
     // always generate source code of parser
-		var options = assign({ output: 'source' }, opts);
+		var options = assign({ output: 'source', format: 'commonjs' }, opts);
 
 		var filePath = file.path;
 
