@@ -1,6 +1,7 @@
 "use strict";
 
-var gutil = require("gulp-util");
+var PluginError = require("plugin-error");
+var replaceExtension = require("replace-ext");
 var through = require("through2");
 var assign = require("object-assign");
 
@@ -14,7 +15,7 @@ module.exports = function(opts) {
     }
 
     if (file.isStream()) {
-      cb(new gutil.PluginError("gulp-pegjs", "Streaming not supported"));
+      cb(new PluginError("gulp-pegjs", "Streaming not supported"));
       return;
     }
 
@@ -27,12 +28,12 @@ module.exports = function(opts) {
       file.contents = new Buffer(
         pegjs.generate(file.contents.toString(), options)
       );
-      file.path = gutil.replaceExtension(file.path, ".js");
+      file.path = replaceExtension(file.path, ".js");
       this.push(file);
     } catch (err) {
       this.emit(
         "error",
-        new gutil.PluginError("gulp-pegjs", err, { fileName: filePath })
+        new PluginError("gulp-pegjs", err, { fileName: filePath })
       );
     }
 

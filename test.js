@@ -1,7 +1,7 @@
 "use strict";
 
 var assert = require("assert");
-var gutil = require("gulp-util");
+var File = require("vinyl");
 var pegjs = require("./");
 
 it("should generate a parser", function(cb) {
@@ -15,7 +15,7 @@ it("should generate a parser", function(cb) {
   });
 
   stream.write(
-    new gutil.File({
+    new File({
       base: __dirname,
       path: __dirname + "/fixture/fixture.pegjs",
       contents: new Buffer("start = ('a' / 'b')+")
