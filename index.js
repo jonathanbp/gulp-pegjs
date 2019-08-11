@@ -25,7 +25,7 @@ module.exports = function(opts) {
     var filePath = file.path;
 
     try {
-      file.contents = new Buffer(
+      file.contents = Buffer.from(
         pegjs.generate(file.contents.toString(), options)
       );
       file.path = replaceExtension(file.path, ".js");

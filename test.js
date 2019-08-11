@@ -18,7 +18,7 @@ it("should generate a parser", function(cb) {
     new File({
       base: __dirname,
       path: __dirname + "/fixture/fixture.pegjs",
-      contents: new Buffer("start = ('a' / 'b')+")
+      contents: Buffer.from("start = ('a' / 'b')+")
     })
   );
 
