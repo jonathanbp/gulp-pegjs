@@ -1,6 +1,6 @@
 # gulp-pegjs
 
-[![Build Status](https://travis-ci.org/jonathanbp/gulp-pegjs.svg?branch=master)](https://travis-ci.org/jonathanbp/gulp-pegjs)
+[![Build Status](https://travis-ci.org/jonathanbp/gulp-pegjs.svg?branch=master)](https://travis-ci.org/jonathanbp/gulp-pegjs) [![Greenkeeper badge](https://badges.greenkeeper.io/jonathanbp/gulp-pegjs.svg)](https://greenkeeper.io/)
 
 This gulp plugin will generate a parser based on a pegjs grammar for its input files.
 
